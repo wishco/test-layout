@@ -1,0 +1,1871 @@
+@import "font_montserrat"
+@import "libs2"
+@import "base"
+@import "vars"
+
+div, header, hgroup, article, nav, footer
+ box-sizing: border-box
+
+// -------------- for debugging AREA (BEGIN) -----
+
+// .HIDE1 
+// 	display: none
+// .HIDE2
+// 	display: none
+// .HIDE3
+// 	display: none
+// .HIDE4
+// 	display: none
+// .HIDE5
+// 	display: none
+// .HIDE6
+// 	display: none
+// .HIDE7
+//  display: none
+
+.red2
+ background-color: red
+.blu2
+ background-color: blue
+.gre2
+ background-color: green
+.wh2
+ background-color: white
+.pi2
+ background-color: pink
+.pi2
+ background-color: pink
+.mm2
+	background: #a9c4c0
+// -------------- for debugging AREA (END) -----
+
+body
+	min-width: $minArea
+	background: $colorBackground
+
+.clearfix:after
+ content: ''
+ display: block
+ clear: both
+
+a
+	text-decoration: none
+	color: $colorHeader1
+	a:visited, a:hover, a:active
+	 color: $colorHeader1
+
+a
+	font-size: 12px
+	font-weight: 400
+p
+	cursor: default
+	font-size: 12px
+	font-weight: 400
+
+h1
+	font-size: 24px
+	font-weight: 500
+ line-height: 1
+
+h2
+	font-size: 20px
+ font-weight: 400
+
+.area
+	width: 100%
+	height: 100%
+
+.flex-wrap
+ flex-wrap: wrap
+
+.area__border
+	position: relative
+	width: 100%
+	height: 100%
+.area__border_carousel
+	width: 97.8%
+	height: 86.5%
+
+.area__item
+	text-align: center
+
+.area__item_carousel-title
+	text-transform: uppercase
+	flex-wrap: wrap
+ width: 100%
+	margin-bottom: 12px
+
+.area__item_carousel-text
+	font-size: 14px
+	font-weight: 500
+ text-align: right
+	line-height: 1.5
+	width: 100%
+	margin-bottom: 28px
+
+.area__wrap_carousel
+	width: 100%
+	height: 156px
+	flex-wrap: wrap
+
+.area__items_carousel
+	width: 100%
+	flex-wrap: wrap
+
+.area__items_carousel-button
+	flex-wrap: wrap
+	margin-bottom: 0px
+
+.area__left
+	margin-right: 33px
+.area__right
+ margin-left: 34px
+
+.gallery__albums
+	margin-top: 40px
+
+.container
+	max-width: $maxArea
+ margin: 0 auto
+ padding: 0 $gutter 0 $gutter 
+
+.hgroup-top
+ background-color: $colorHeaderBackground
+
+.hgroup-top__wrap
+ height: 51px
+
+.link_menu-top
+ width: 40.3%
+ min-width: 415px
+ margin-right: 3.2%
+.link_tel
+.link_call-back
+.link_login
+ width: 132px
+ margin-left: 3.2%
+ margin-right: 2px
+
+.link__wrap_menu-top
+ list-style-type: none
+
+.link__image_tel
+	width: 15px
+	height: 19px
+.link__image_login
+	width: 16px
+	height: 17px
+
+.link__text
+	cursor: pointer
+.link__text_tel
+	font-size: 14px
+	font-weight: 500
+ margin-left: 5px
+ letter-spacing: 0.40px
+ cursor: default
+.link__text_call-back
+ font-weight: 500
+
+.link__text_login
+ margin-left: 8px
+ font-weight: 500
+ 
+.link__block_tel
+ cursor: default
+
+.link__wrap_call-back
+	padding: 5px 14.5px
+	margin-left: 10px
+
+.albums__wrap
+	display: flex
+	justify-content: center
+
+.menu__item a
+ list-style-type: none
+ color: $colorHeader1
+.menu__item a
+ display: inline-block
+ text-decoration: none
+ cursor: pointer
+ position: relative
+.menu__item a:after, 
+ display: block
+ content: ""
+ height: 1px
+ width: 100%
+ left: 50%
+ opacity: 0%
+ position: absolute
+ transition: opacity 0.3s linear
+ transform: translateX(-50%)
+.menu__item a:hover:after,
+ opacity: 100%
+.menu__item.active a
+	cursor: default
+.menu__item.active a:after
+	opacity: 100%
+
+.menu__item a:hover:after,
+.menu__item a:after,
+.menu__item.active a:after
+ bottom: 12%
+ background-color: $colorHeader1
+ color: $colorHeader1
+
+.menu__item_menu-top a
+ color: $colorHeader1
+.menu__item_menu-top a:hover:after,
+.menu__item_menu-top a:after,
+.menu__item_menu-top.active a:after
+ bottom: -5%
+ background-color: $colorHeader1
+ color: $colorHeader1
+
+.menu__item_menu-top-select a
+ color: $colorHeader2
+ font-weight: 500
+.menu__item_menu-top-select a:hover:after,
+.menu__item_menu-top-select a:after,
+.menu__item_menu-top-select.active a:after
+ display: none
+
+.menu__title
+	text-transform: uppercase
+	margin-bottom: 5px
+
+.menu__title p
+	font-weight: 500
+
+.navigation
+ background: $colorNavigationBackground
+
+.navigation__wrap
+ padding-top: 55px
+ padding-bottom: 22px
+
+.navigation__item
+	min-width: 75px
+.navigation__text
+	position: absolute
+	margin-left: 75px
+	cursor: pointer
+
+.navigation__list
+	flex-wrap: wrap
+	margin-left: -20px
+	margin-right: -20px
+
+.navigation__items
+	position: relative
+	align-items: center
+	box-shadow: 0.1em 0.1em 5px rgba(122,122,122,0.5)
+	line-height: 1.4
+ cursor: pointer
+	width: 195.3px
+	height: 72px
+	margin-top: 13px
+	margin-bottom: 13px
+	margin-left: 20px
+	margin-right: 20px
+
+.navigation__items
+	transition: box-shadow 0.3s ease-out
+ &:hover
+  box-shadow: 0.1em 0.1em 12px rgba(122,122,122,0.5)
+ &:active
+  box-shadow: 0.3em 0.3em 12px rgba(122,122,122,0.5)
+.navigation__items.active
+ box-shadow: 0.3em 0.3em 12px rgba(122,122,122,0.5)
+ cursor: default
+.navigation__items.active p
+	cursor: default
+
+.hgroup-center
+ background-color: $colorBannerBackground
+ background-position: center
+
+.banner
+	position: relative
+	display: block
+	z-index: 1
+	width: 100%
+	height: 378px
+
+.hgroup-center
+	position: relative
+
+.hgroup-center__background
+	position: absolute
+	display: block
+	z-index: 0
+	width: 1140px
+ height: 378px
+ top: 0
+ bottom: 0
+ right: 0
+ left: 0
+	overflow: hidden
+	margin: auto
+
+.gallery
+	margin-bottom: 49px
+
+.gallery__content
+	position: relative
+	display: block
+	z-index: 1
+	width: 100%
+
+.area_gallery
+	position: relative
+ width: calc((100% - 60px)/3)
+	height: 305px
+	padding: 0 30px
+	overflow: hidden
+ max-width: 360px
+
+.area__bg_gallery
+	position: absolute
+	display: block
+	z-index: 0
+ width: 360px
+ height: 305px
+
+.area__border_gallery
+	position: relative
+ width: 92%
+ height: 157px
+
+ background: rgba(50, 50, 50, 0.6)
+	margin-top: 15px
+	transition: height 0.5s ease,
+	width 0.5s ease
+
+.area__wrap_gallery
+	width: 100%
+	height: 120px
+
+.area__items_gallery
+	width: 100%
+	height: 100%
+	flex-wrap: wrap
+	margin-top: -6px
+
+.area__item_gallery
+	text-transform: uppercase
+	font-size: 14px
+	color: $colorMaxLight
+ font-weight: 500
+ margin: 0 5px
+
+.img-left, .img-right
+	transition: background 0.4s ease
+ background: rgba(202, 202, 202, 0)
+
+.img-left:hover, .img-right:hover
+	background: rgba(202, 202, 202, 0.2)
+
+.img-left:active, .img-right:active
+	background: rgba(202, 202, 202, 0.4)
+
+.banner__selector
+ position: absolute
+	left: 0
+	top: auto
+	right: 0
+	bottom: 0
+	color: yellow
+	z-index: 10
+	margin: auto
+ text-align: center
+
+.selector__wrap
+	position: relative
+ display: flex
+	flex-direction: row
+	flex-wrap: wrap
+ justify-content: center
+
+.selector__item
+	position: relative
+	width: 67px
+	height: 4px
+ border-width: 0
+ margin: 0 10px
+ background-color: $colorMaxLight
+ list-style-type: none
+ box-shadow: 0.1em 0.1em 5px rgba(122,122,122,0.5)
+
+.selector__item.active > .selector__style
+ background-color: $colorHeader2
+ transition: background-color 0.3s ease-out
+ &:hover
+  background-color: lighten($colorHeader2, 15%)
+ &:active
+  background-color: lighten($colorHeader2, 5%)
+
+.selector__style
+ transition: background-color 0.3s ease-out
+.selector__style:hover 
+ background-color: darken($colorMaxLight, 5%)
+.selector__style:active 
+ background-color: $colorMaxLight
+
+.selector__style
+	position: absolute
+	display: block
+	width: 100%
+	height: 100%
+ background-color: $colorMaxLight
+
+.gallery
+ background-color: $colorGalleryBackground
+
+.gallery__wrap
+ background: $colorGalleryBackground
+ padding-top: 34px
+ padding-bottom: 40px
+
+.gallery__title
+	text-transform: uppercase
+ font-weight: 400
+ text-align: center
+ line-height: 1.4
+ margin-bottom: 43px
+
+.footer
+ background: $colorFooterBackground
+
+.logotype,
+.telephone,
+.clock,
+.place
+	display: flex
+
+.telephone__wrap, .clock__wrap, .place__wrap
+	display: flex
+ flex-direction: row
+	align-items: center
+
+.telephone__ico, .telephone__text
+ align-items: center
+ cursor: default
+
+.telephone__ico
+	margin-right: 10px
+
+.telephone__ico img
+ align-items: center
+
+.telephone__text
+	font-size: 14px
+	font-weight: 500
+	min-width: 125px
+	letter-spacing: 0.3px
+	margin-top: 2px
+	white-space: nowrap
+
+.clock__wrap
+	min-width: 190px
+.clock__img
+	margin-right: 10px
+	margin-top: 3px
+.clock__text
+	font-weight: 400
+ letter-spacing: 0.20px
+ margin-top: 2px
+
+.place__img, .place__text
+	display: flex
+	align-items: center
+
+.place__img
+	margin-right: 10px
+
+.place__text
+	letter-spacing: 0.15px
+ margin-top: 3px
+
+.place__where
+	font-weight: 500
+
+.telephone-wrap
+	display: flex
+
+.main-arcticle
+	padding-top: 35px
+	padding-bottom: 50px
+ background: $colorArcticleBackground
+
+.arcticle
+	position: relative
+	z-index: 2
+	padding-bottom: 49px
+	overflow: hidden
+
+.arcticle__image
+	position: absolute
+	width: 570px
+ height: 566px
+ right: 0
+	z-index: 0
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0, rgba(255, 255, 255, 0) 0), url('../img/garden-center-romashkino-park.png' )
+ background-repeat: no-repeat
+
+.arcticle__content
+ padding-top: 42px
+ margin-right: -20px
+	min-width: calc(50% - 20px)
+	z-index: 1
+
+.arcticle__title
+	line-height: 1.5
+ text-transform: uppercase
+
+.text-block
+ font-size: inherit
+ font-weight: inherit
+ white-space: nowrap
+
+.arcticle__text
+ line-height: 1.75
+	margin-top: 25px
+ margin-bottom: 16px
+
+.arcticle__text p
+	font-size: 14px
+
+.text-offset1
+	padding-top: 25px
+
+.text-offset2
+	padding-top: 2px
+	letter-spacing: 0.1px
+
+.arcticle__button
+ padding: 3px 0px 5px 0px 
+
+.menu-bottom__wrap
+	display: flex
+
+.grid__title
+	position: relative
+
+.grid__title-text
+	font-weight: 500
+	position: absolute
+ text-transform: uppercase
+
+ul, li
+	display: block
+
+.menu__wrap
+	line-height: 2.1
+ list-style-type: none
+
+.grid__section-services
+	width: 55.8%
+
+.grid__section_catalog1
+	width: 100%
+	height: 100%
+
+.grid__section_catalog2
+ width: 100%
+
+.left-border
+	position: relative
+ &::after
+		display: block
+		content: ""
+		position: absolute
+		border-left: 1px solid $colorElementsLight
+		height: 160px
+		left: 0
+		bottom: 4%
+		transform: translateX(-50%)
+  
+.info
+	padding-top: 44px
+.info__text
+
+.info__section
+	display: flex
+	justify-content: center
+ letter-spacing: 0.25px
+
+.info__section_map
+	margin-bottom: 15px
+
+.info__section_law
+	padding-bottom: 30px
+
+.info__link
+	color: $colorHeader2
+	font-weight: 500
+	transition: color .4s ease
+	font-size: inherit
+ font-weight: inherit
+ white-space: nowrap
+ &:hover
+  color: lighten($colorHeader2, 25%)
+ &:active
+  color: lighten($colorHeader2, 15%)
+
+.subscription
+	padding-top: 70px
+	margin-left: 5px
+
+.subscription__wrap
+	width: 262px
+
+.subscription__title
+	padding-bottom: 10px
+
+.mail__wrap
+	display: flex
+	justify-content: space-between
+	margin-right: 5px
+
+.mail__input
+ letter-spacing: 0px
+ flex-grow: 1
+ background-color: transparent
+ padding-right: 30px
+ width: 100%
+
+
+ &::placeholder
+  color: $colorHeader1
+
+textarea:focus, input:focus
+ outline: none
+
+.social
+	margin-left: 5px
+
+.social__wrap
+	display: flex
+	justify-content: space-between
+ width: 261px
+
+.social__item
+	position: relative
+	width: 26px
+	height: 100%
+
+.social__item img
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 26px
+	transform: rotate(0deg)
+	transition: transform  .3s ease,
+	top .3s ease
+ &:hover
+  top: -3px
+  transform: rotate(360deg)
+
+.button
+	border-radius: 5px
+	cursor: pointer
+	border: none
+	box-sizing: border-box
+
+.area__block
+	width: 150px
+	height: 30px
+
+.button_dark
+	letter-spacing: 0.35px
+	color: $colorButtonDarkText
+ background-color: $colorButtonDark
+ transition: background-color .2s ease
+ &:focus, &:hover
+  text-decoration: none
+  color: $colorButtonDarkText
+ &:hover
+  background-color: lighten($colorButtonDark, 5%)
+  &::after
+   opacity: .22
+ &:active
+  background-color: lighten($colorButtonDark, 15%)
+
+.button_light
+	letter-spacing: 0.35px
+	color: $colorButtonLightText
+ background-color: $colorButtonLight
+ transition: background-color .2s ease
+ &:focus, &:hover
+  text-decoration: none
+  color: lighten($colorButtonLightText, 25%)
+ &:hover
+  background-color: lighten($colorButtonLight, 5%)
+  &::after
+   opacity: .22
+ &:active
+  background-color: lighten($colorButtonLight, 15%)
+
+.button_transparent
+	letter-spacing: 0.35px
+	color: $colorButtonTransparentText
+ border-color: $colorButtonTransparentText
+ border-width: 1px
+ border-style: solid
+ transition: background-color .2s ease
+ &:focus, &:hover
+  text-decoration: none
+ &:hover
+  background: rgba(255, 255, 255, 0.3)
+  &::after
+   opacity: .22
+ &:active
+  background: rgba(255, 255, 255, 0.2)
+
+.button_transparent-white
+	letter-spacing: 0.35px
+	color: $colorElementsLight
+ border-color: $colorElementsLight
+ border-width: 1px
+ border-style: solid
+ background-color: rgba(255, 255, 255, 0.0)
+ transition: background-color 0.5s ease,
+ color .5s ease
+ &:focus, &:hover
+  text-decoration: none
+ &:hover
+  background: rgba(255, 255, 255, 1)
+  color: #000
+  &::after
+   opacity: .22
+ &:active
+  background: rgba(255, 255, 255, 0.7)
+
+.button_transparent-dark
+	letter-spacing: 0.35px
+	color: black
+ border-color: black
+ border-width: 1px
+ border-style: solid
+ background: rgba(0, 0, 0, 0)
+ transition: background-color 0.5s ease,
+ color .5s ease
+ &:focus, &:hover
+  text-decoration: none
+ &:hover
+  background: $colorHeader2
+  color: #fff
+  &::after
+   opacity: .22
+ &:active
+  background: lighten($colorHeader2, 15%)
+
+//--- flex area BEGIN
+.flex-sb,
+.flex-c,
+.flex-s,
+.flex-e,
+.flex-sb-c,
+.flex-c-c,
+.flex-s-c,
+.flex-e-c,
+.flex-sb-e,
+.flex-c-e,
+.flex-s-e,
+.flex-e-e,
+.flex-sb-s,
+.flex-c-s,
+.flex-s-s,
+.flex-e-s
+	display: flex
+ flex-direction: row
+.flex-sb,
+.flex-sb-c,
+.flex-sb-s,
+.flex-sb-e,
+ justify-content: space-between
+.flex-c,
+.flex-c-c,
+.flex-c-s,
+.flex-c-e,
+ justify-content: center
+.flex-s,
+.flex-s-c,
+.flex-s-s,
+.flex-s-e,
+ justify-content: flex-start
+.flex-e,
+.flex-e-c,
+.flex-e-s,
+.flex-e-e,
+ justify-content: flex-end
+.flex-sb-c,
+.flex-c-c,
+.flex-s-c,
+.flex-e-c
+ align-items: center
+.flex-sb-s,
+.flex-c-s,
+.flex-s-s,
+.flex-e-s
+ align-items: flex-start
+.flex-sb-e,
+.flex-c-e,
+.flex-s-e,
+.flex-e-e
+ align-items: flex-end
+//--- flex area END
+
+.grid__wrap_subscription
+ position: relative
+ flex-wrap: wrap
+ width: 100%
+
+.grid_1, .grid_2, .grid_3, .grid_5, .grid_6, .grid_8, .grid_9, .grid_10, .grid_11, 
+ display: flex
+
+@media only screen and (min-width : 1171px)
+ .navigation__list
+  min-width: 1180px
+ .grid_10, .grid_11,
+  margin-left: 35px
+	 margin-right: 52px
+
+@media only screen and (min-width : 1061px) and (max-width : 1170px)
+ .grid_10, .grid_11,
+  margin-left: calc( 0px + (35 - 0) * (100vw - 1061px)/(1170 - 1061) )
+	 margin-right: calc( 0px + (52 - 0) * (100vw - 1061px)/(1170 - 1061) )
+
+@media only screen and (min-width : 1061px) and (max-width : 1170px)
+	.navigation__list
+		margin-left: calc( (-100% + 5*195.3px) / 10 )
+		margin-right: calc( (-100% + 5*195.3px) / 10 )
+	.navigation__items
+		margin-left: calc( (100% - 5*195.3px) / 10 )
+		margin-right: calc( (100% - 5*195.3px) / 10 )
+
+@media only screen and (min-width : 851px) and (max-width : 1060px)
+	.navigation__list
+		margin-left: calc( (-100% + 4*195.3px) / 8 )
+		margin-right: calc( (-100% + 4*195.3px) / 8 )
+	.navigation__items
+		margin-left: calc( (100% - 4*195.3px) / 8)
+		margin-right: calc( (100% - 4*195.3px) / 8 )
+
+@media only screen and (min-width : 761px) and (max-width : 850px)
+	.navigation__list
+		margin-left: calc( (-100% + 4*167.3px) / 8 )
+		margin-right: calc( (-100% + 4*167.3px) / 8 )
+	.navigation__items
+	 width: 167.3px
+		margin-left: calc( (100% - 4*167.3px) / 8)
+		margin-right: calc( (100% - 4*167.3px) / 8 )
+ .navigation__text
+  margin-left: 70px
+	.navigation__item
+		min-width: 65px
+
+@media only screen and (min-width : 761px) and (max-width : 1140px)
+ .hgroup-center__background
+  margin: 0
+  top: auto
+  left: auto
+  bottom: 0
+  right: 0
+
+@media only screen and (max-width : 970px)
+ .menu__item a.menu__item__adaptive1
+  display: none
+ .link_menu-top
+  width: 240px
+  min-width: 0px
+
+	.area__border_gallery
+		position: relative
+	 width: 100%
+	 height: 100%
+		margin-top: 0px
+ 
+ .grid_10, .grid_11
+  display: none
+
+// применяются после 761px до максимума
+@media only screen and (min-width : 761px)
+ .hgroup-center__background
+  background-position: right
+ .text-nowrap-760
+  display: none
+
+ .grid-wrap
+	 width: 100%
+  height: 275px
+		flex-direction: column
+	 align-content: space-between
+
+	.grid_1
+		order: 1
+	 height: 33px
+	 width: 27.37%
+	 margin-right: 1px
+
+	.grid_8
+		order: 2
+	 width: 27.37%
+	 height: 241px
+	 min-width: 275px
+	 margin-right: 5px
+
+	.grid_2
+		order: 3
+	 min-width: 165px
+	 width: 16.23%
+	 height: 33px
+
+	.grid_9
+		order: 4
+	 min-width: 165px
+	 width: 16.23%
+	 height: 241px
+
+	.grid_10
+		order: 5
+	 min-width: 210px
+	 width: 15%
+	 height: 33px
+
+	.grid_11
+		order: 6
+	 height: 241px
+
+	.grid_6
+		order: 7
+	 min-width: 267px
+	 width: 23.4%
+	 height: 33px
+
+	.grid_5
+		position: relative
+		order: 8
+	 min-width: 263px
+	 width: 23%
+	 align-self: flex-end
+	 flex-grow: 1
+	 align-content: space-between
+	 flex-wrap: wrap
+
+	.grid__wrap_subscription
+	 padding-top: 69px
+
+	.mail__label
+	 font-size: 12px
+	 padding-bottom: 12px
+
+	.mail__container
+	 position: relative
+	 display: block
+	 width: 100%
+	 height: 24px
+  margin-top: 0px
+  border-bottom: 1px solid $colorHeader1
+
+	.mail__input
+	 font-size: 12px
+
+	.mail__button
+	 position: absolute
+	 width: 18px
+	 height: 18px
+	 bottom: 5px
+	 right: 5px
+
+	.grid_3
+		order: 9
+	 min-width: 267px
+	 width: 23.4%
+
+ .social__wrap
+  margin-top: 15px
+  margin-bottom: 9px
+
+	.grid_4, .grid_7
+	 display: none
+	 order: 999
+
+ .footer
+  padding-top: 53px
+
+@media only screen and (max-width : 760px)
+ .link_menu-top,
+ .area__left,
+ .area__right,
+ .arcticle__image
+  display: none
+
+ .grid
+  min-width: auto
+
+ .gallery__albums
+	 margin-top: 12px
+	.gallery
+	 margin-bottom: 16px
+ 
+ .area__border_carousel
+	 width: 100%
+	 height: 78%
+
+ .arcticle
+		padding-bottom: 0
+
+ .area__item_carousel-title
+		padding-bottom: 10px
+
+	.selector__item
+		width: 74.24px
+		height: 5.55px
+
+ .link__text_tel
+
+ .link_tel
+  width: 218px
+  min-width: 135px
+ .link_call-back
+  width: 184px
+ .link_menu-top
+
+	.link_login
+	 width: auto
+	 min-width: 130px
+
+ .link__wrap_login
+  margin-right: -2px
+
+ .link__text_tel
+  margin-left: 7px
+  letter-spacing: 0.4px
+ .link__text_login
+  margin-left: 13px
+  letter-spacing: 0.1px
+
+ .link__wrap_call-back
+	 padding: 6px 17px
+  border-width: 2px
+  margin-bottom: 1px
+  margin-left: 0
+
+ .hgroup-center__background
+  margin: auto
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+
+	.navigation__list
+		justify-content: center
+
+	.area__bg_gallery
+		width: auto
+	 height: auto
+
+	.area_gallery
+	 width: 704px
+		height: 188px
+		padding: 0 
+		margin-bottom: 22px
+	 max-width: 704px
+	.gallery__content
+	 flex-wrap: wrap
+	.gallery__title
+	 margin-bottom: 35px
+
+	.area__border_gallery
+	 width: 83%
+	 height: 96px
+		margin-top: 10px
+
+ .area__item_gallery
+  margin-right: 20px
+  text-align: right
+ .area__link_gallery
+  margin-right: 33px
+
+@media only screen and (max-width : 760px) and (min-width : 421px)
+ .navigation__wrap
+	 padding-top: 31px
+	.navigation__item
+		min-height: 83px
+		min-width: 0px
+	.navigation__text
+		margin-left: 0px
+		margin-right: 0px
+		margin-top: 83px
+		text-align: center
+
+	.navigation__list
+		margin: 0 -7.5px
+		padding: 0
+		padding-top: 5px
+
+	.navigation__items
+	 justify-content: center
+	 align-items: start
+		width: 160px
+		height: 138px
+		margin-top: 8px
+		margin-bottom: 8px
+
+ .footer
+  padding-top: 68px
+
+@media only screen and (max-width : 1160px) and (min-width : 761px)
+ .arcticle__image
+  width: calc( 50px + 162px + (570 - 162) * (100vw - 761px)/(1160 - 761) )
+  right: -50px
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%), url('../img/garden-center-romashkino-park.png' )
+
+@media only screen and (max-width : 760px) and (min-width : 731px)
+	.navigation__list
+		margin-left: calc( (-100% + 4*160px) / 8 )
+		margin-right: calc( (-100% + 4*160px) / 8 )
+	.navigation__items
+		margin-left: calc( (100% - 4*160px) / 8)
+		margin-right: calc( (100% - 4*160px) / 8 )
+
+@media only screen and (max-width : 730px) and (min-width : 421px)
+ .navigation__list
+		margin-left: 10px
+		margin-right: 10px
+  justify-content: space-between
+	.navigation__items
+		margin-left: 10px
+		margin-right: 10px
+
+@media only screen and (max-width : 760px)
+ .arcticle
+  justify-content: center
+ .arcticle__button
+  justify-content: center
+ .arcticle__title
+	 text-align: center
+ .arcticle__text p
+	 text-align: center
+ .arcticle__text br
+  display: none
+
+@media only screen and (max-width : 760px) and (min-width : 321px)
+ .arcticle__text p
+  font-size: calc( 11px + (16.67 - 11) * (100vw - 321px)/(760 - 321) )
+  line-height: 1.5
+
+ a
+		font-size: calc( 12px + (16.67 - 12) * (100vw - 321px)/(760 - 321) )
+	p
+		font-size: calc( 12px + (16.67 - 12) * (100vw - 321px)/(760 - 321) )
+	h1
+		font-size: calc( 16px + (25 - 16) * (100vw - 321px)/(760 - 321) )
+	h2
+		font-size: calc( 14px + (22.2 - 14) * (100vw - 321px)/(760 - 321) )
+
+ .area__item_gallery
+  font-size: calc( 12px + (16.67 - 12) * (100vw - 321px)/(760 - 321) )
+
+ .area__link_gallery
+  margin-right: 33px
+
+	.main-arcticle
+		padding-top: 0px
+		padding-bottom: 28px
+
+	.arcticle__content
+	 padding-top: 32px
+	 margin-right: 0
+		max-width: 85%
+		min-width: 0
+
+	.text-offset1
+		padding-top: 24px
+
+	.text-offset2
+		padding-top: 26px
+
+ .arcticle__button
+  padding: 8px 0px 0px 0px
+
+ .gallery__wrap
+	 padding-top: 36px
+
+ .hgroup-center__background
+  background-size: cover
+  height: calc( 205px + (424 - 205) * (100vw - 321px)/(760 - 321) )
+ .banner
+  height: calc( 205px + (424 - 205) * (100vw - 321px)/(760 - 321) )
+
+ .navigation__text
+  font-size: calc( 12px + (16.67 - 12) * (100vw - 420px)/(760 - 420) )
+ .container
+  padding-left: calc( 8px + (28 - 8) * (100vw - 321px)/(760 - 321) )
+  padding-right: calc( 8px + (28 - 8) * (100vw - 321px)/(760 - 321) )
+
+ .hgroup-top__wrap
+  height: calc( 30px + (50 - 30) * (100vw - 321px)/(760 - 321) )
+ .link__image_tel
+  width: calc( 16px + (21 - 16) * (100vw - 321px)/(760 - 321) )
+  height: calc( 20px + (27 - 20) * (100vw - 321px)/(760 - 321) )
+ .link__image_login
+  width: calc( 16px + (22 - 16) * (100vw - 321px)/(760 - 321) )
+  height: calc( 17px + (24 - 17) * (100vw - 321px)/(760 - 321) )
+
+ .area__block
+  width: calc( 150px + (209 - 150) * (100vw - 321px)/(760 - 321) )
+  height: calc( 30px + (42 - 30) * (100vw - 321px)/(760 - 321) )
+
+ .selector__item
+  width: calc( 40.3px + (74 - 40.3) * (100vw - 321px)/(760 - 321) )
+  height: calc( 4px + (6 - 4) * (100vw - 321px)/(760 - 321) )
+  margin-left: calc( 7.5px + (12.5 - 7.5) * (100vw - 321px)/(760 - 321) )
+  margin-right: calc( 7.5px + (12.5 - 7.5) * (100vw - 321px)/(760 - 321) )
+
+ .area__item_carousel-text
+ 	margin-top: 0px
+  line-height: 1.4
+
+ .area__wrap_carousel
+  height: calc( 122px + (190 - 122) * (100vw - 321px)/(760 - 321) )
+  margin-top: -34px
+
+ 	a, p
+ 	 font-size: calc( 12px + (16.6 - 12) * (100vw - 321px)/(760 - 321) )
+		h1
+		 font-size: calc( 16px + (25 - 16) * (100vw - 321px)/(760 - 321) )
+		h2
+		 font-size: calc( 14px + (22.2 - 14) * (100vw - 321px)/(760 - 321) )
+ .link__text_tel
+  font-size: calc( 12px + (19.45 - 12) * (100vw - 321px)/(760 - 321) )
+ .link__text_call-back, .link__text_login
+  font-size: calc( 10px + (14 - 10) * (100vw - 321px)/(760 - 321) )
+
+	.gallery__wrap
+	 padding-bottom: 13px
+	 font-size: calc( 12px + (16.67 - 12) * (100vw - 321px)/(760 - 321) )
+
+	.grid_1, .grid_3, .grid_2, .grid_7, .grid_6, .grid_5
+	 display: flex
+
+ .grid-wrap
+		width: 100%
+		flex-direction: row
+		justify-content: space-between
+
+	.grid_1
+	 order: 10
+	 width: 205px
+	 height: 37px
+
+	.grid_3
+	 order: 20
+	 width: 225px
+	 height: 37px
+
+	.social__title
+		display: none
+	.social__wrap
+	 width: 225px
+
+	.grid_2
+	 order: 30
+	 width: 210px
+	 height: 37px
+ .telephone__text
+  font-size: 19.45px
+  font-weight: 500
+  margin-top: -2px
+
+	.grid_7
+	 order: 40
+	 width: 100%
+
+ .grid__section_bottom-horizontal
+  width: calc(100% - 7px)
+  padding-top: 33px
+  padding-bottom: 28px
+
+	.grid_6
+	 order: 50
+	 width: 210px
+	 align-items: flex-end
+
+	.place__where
+	 font-size: 14px
+	 font-weight: 400
+	 line-height: 1.65
+	.place__where br
+	 display: none
+ .place__img
+  display: none
+ .place__text
+ 	display: flex
+	 align-items: center
+
+	.grid_5
+		order: 60
+		position: relative
+	 width: 283px
+	 height: 67px
+  align-self: flex-start
+	 align-content: space-between
+  flex-direction: row
+  flex-wrap: wrap
+
+	.mail__label
+	 font-size: 14px
+	 margin-top: 3px
+
+	.mail__container
+	 position: relative
+	 display: block
+	 width: 100%
+	 height: 100%
+  margin-top: 13px
+  padding-bottom: 9px
+  border-bottom: 1px solid $colorHeader1
+
+	.mail__input
+	 font-size: 14px
+
+	.mail__button
+	 position: absolute
+	 width: 18px
+	 height: 18px
+	 bottom: 15px
+	 right: 12px
+
+	.grid__wrap_subscription
+	 height: auto
+  align-self: flex-end
+
+	.grid_4, .grid_8, .grid_9, .grid_10, .grid_11,
+	 display: none
+	 order: 999
+
+	.info
+		padding-top: 22px
+	.info__text_map
+	 font-size: 14px
+	.info__text_law
+	 font-size: 12.5px
+
+	.info__section
+		display: flex
+		justify-content: left
+	 letter-spacing: 0.25px
+
+	.info__section_map
+		margin-bottom: 0px
+
+	.info__section_law
+		padding-bottom: 30px
+
+@media only screen and (max-width : 760px) and (min-width : 621px)
+ .area__items_gallery
+  justify-content: flex-end
+  flex-wrap: nowrap
+
+@media only screen and (max-width : 740px) and (min-width : 621px)
+ .area__border_gallery
+  width: 100%
+ .area__items_gallery
+  width: 100%
+ .area__link_gallery
+  width: auto
+
+@media only screen and (max-width : 720px)
+ .menu__item_remove1
+  display: none
+ .grid_2
+  order: 20
+  margin-left: 30px
+
+ .grid_3
+  order: 30
+  height: 37px
+  margin-top: 25px
+
+ .grid_4
+  order: 40
+  display: flex
+  height: 37px
+  margin-top: 25px
+  align-self: center
+  
+ .area__link_top
+  height: 100%
+
+	.area__button
+	 font-size: 10px
+	 font-weight: 500
+		width: 97px
+		height: 100%
+		text-align: center
+		font-size: 14px
+
+@media only screen and (max-width : 530px)
+ .grid_2
+  margin-left: 0px
+  width: auto
+ .telephone__text
+  font-size: calc( 14px + (19.45 - 14) * (100vw - 321px)/(760 - 421) )
+ .telephone__ico
+  width: 19px
+	.mail__button img
+	 width: 18px
+	 height: 18px
+
+	.mail__button 
+	 bottom: 7px
+	 right: 1px
+
+ .grid_5
+  order: 50
+  margin-bottom: 20px
+ .grid_6
+  order: 60
+  margin-right: 20px
+
+@media only screen and (max-width : 620px)
+
+ .area__link_gallery
+  margin-right: 0
+ .area__item_gallery
+  margin-right: 0
+  margin-left: 0
+ .area__item_gallery
+  margin-right: 0
+
+ .area__items_gallery
+  justify-content: center
+
+ .area__item_gallery
+  text-align: center
+  width: 100%
+  margin-top: 10px
+
+	.area__border_gallery
+	 height: 70%
+	 margin: 0
+
+ .link_call-back
+  display: none
+
+ .area__items_carousel-button
+  justify-content: center
+
+ .area__item_carousel-title
+  justify-content: center
+
+ .hgroup-center__background
+  position: relative
+
+ .area__item_carousel-text
+  text-align: center
+  justify-content: center
+  align-items: center
+  width: 100%
+
+	.area__items
+		margin-left: 4%
+		margin-right: 4%
+
+ .area__border_carousel
+	 width: 100%
+	 height: 100%
+
+	.area__items_carousel
+	 justify-content: center
+
+ .area__link_gallery
+  margin-right: 0
+
+ .area__item_gallery
+  margin-top: 6px
+  margin-bottom: 17px
+
+@media only screen and (max-width : 420px)
+ .area__item-br
+  display: none
+
+ .navigation__wrap
+	 padding-top: 0px
+
+	.navigation__item
+		min-width: 50px
+	.navigation__text
+		margin-left: 52px
+
+	.navigation__list
+		margin-top: 28px
+		margin-left: -5px
+		margin-right: -5px
+
+	.navigation__items
+		margin-left: calc( (100% - 2*150px) / 4)
+		margin-right: calc( (100% - 2*150px) / 4 )
+		margin-top: 5px
+		margin-bottom: 5px
+	 width: 150px
+		height: 60px
+
+	.gallery__wrap
+	 background: $colorGalleryBackground
+	 padding-top: 0px
+
+ .gallery__title
+  margin-bottom: 15px
+
+	.area__border_gallery
+	 width: 91.5%
+	 height: 80%
+	 margin: 0
+	 padding: 0
+	 margin-top: 5px
+
+	.area_gallery
+	 width: 306px
+		height: 135px
+		margin-bottom: 11px
+  margin-left: auto
+  margin-right: auto
+
+ .area__items_gallery
+  margin: 0
+  padding: 0
+  height: 82%
+
+ .area__item_gallery
+  font-size: 12px
+  margin: 0
+  padding: 0
+
+ .area__wrap_gallery
+  margin: 0
+  padding: 0
+
+ .area_gallery2
+	 width: 306px
+		height: 135px
+
+ .footer
+  padding-top: 17px
+
+ .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6
+	 display: flex
+
+ .grid-wrap
+		width: 100%
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+	.grid_1
+	 order: 10
+	 width: 143px
+	 height: 33px
+
+	.grid_2
+	 order: 20
+	 width: 149px
+	 height: 33px
+  margin-bottom: 0px
+
+	.telephone__ico
+ 	margin-left: 1px
+ 	margin-bottom: -2px
+	.telephone__text
+	 font-size: 14px
+	 font-weight: 500
+  margin-top: 3px
+  margin-left: -5px
+
+	.grid_3
+	 order: 30
+	 width: 176px
+	 height: 64px
+	 margin-top: 0
+  
+	.social
+ 	margin-left: -1px
+
+ .social__title
+  display: none
+ .social__wrap
+	 display: flex
+	 justify-content: space-between
+  width: 176px
+
+	.grid_4
+	 order: 40
+	 width: 97px
+	 height: 27px
+	 align-self: center
+	 margin-top: 0
+
+ .area__link
+  width: 100%
+  height: 100%
+ .area__link_gallery
+  width: auto
+
+	.area__button
+	 font-size: 10px
+	 font-weight: 500
+		width: 100%
+		height: 100%
+		text-align: center
+		padding-top: 2px
+
+ .grid_5
+		order: 50
+	 width: 100%
+	 height: auto
+  align-self: flex-start
+  flex-direction: row
+  flex-wrap: wrap
+  margin-bottom: 0px
+
+	.mail__label
+	 font-size: 10px
+	 width: 100%
+	 padding-bottom: 5px
+ .mail__container
+  width: 100%
+
+	.mail__input
+	 font-size: 10px
+	 padding-bottom: 9px
+	 width: 100.5%
+
+	.mail__button
+	 position: absolute
+	 width: 18px
+	 height: 18px
+	 bottom: 7px
+	 right: 1px
+
+	.grid_6
+	 order: 60
+	 width: 210px
+	 height: 60px
+	 align-items: flex-end
+
+	.place__where
+	 font-size: 10px
+	 font-weight: 500
+	 line-height: 1.7
+	 letter-spacing: 0.25px
+	.place__where br
+	 display: none
+ .place__img
+  display: none
+ .place__text
+ 	display: flex
+	 align-items: center
+
+	.grid_7, .grid_8, .grid_9, .grid_10, .grid_11, 
+	 display: none
+	 order: 999
+
+	.info
+		padding-top: 12px
+	.info__text_map
+	 font-size: 10px
+	 width: 190px
+	.info__text_law
+	 font-size: 10px
+	 line-height: 1.85
+
+	.info__section
+		display: flex
+		justify-content: left
+	 letter-spacing: 0.25px
+
+	.info__section_map
+		margin-bottom: 11px
+
+	.info__section_law
+		padding-bottom: 30px
+
+ .area__link_gallery
+  margin-right: 0
+
+ .area__item_gallery
+  margin-top: 6px
+  margin-bottom: 17px
+
+ .albums__wrap
+  margin-top: 18px
+  margin-bottom: 22px
+
+	.mail__container
+	 position: relative
+	 display: block
+	 width: 100%
+	 height: 25px
+  margin-top: 0px
+  border-bottom: 1px solid $colorHeader1
+
+@media only screen and (max-width : 320px)
+	a, p
+		font-size: 12px
+
+	h1
+		font-size: 16px
+	h2
+		font-size: 14px
+
+ .link__text_tel
+  font-size: 12px
+ .link__text_login
+  font-size: 10px
+ .area__item_carousel-title
+  margin: 0
+  padding: 0
+  margin-bottom: -8px
+
+ .area__item_carousel-text
+  font-size: 12px
+  margin: 0
+  padding: 0
+
+ .area__items_carousel-button
+  margin-bottom: -16px
+
+ .link_menu-top
+  display: none
+ .container
+  padding: 0 8px 0 8px
+ .hgroup-top__wrap
+  height: 30px
+ .hgroup-center__background
+  height: 205px
+  position: relative
+  background-position: center
+
+ .banner
+  height: 205px
+
+ .link_tel
+  width: 140px
+  padding: 0
+  margin: 0
+
+ .link_login
+  width: 140px
+
+ .link__wrap_login
+  justify-content: flex-end
+  margin: 0
+  padding: 0
+
+ .link__text_tel
+  margin: -1px 0px 0 5px
+  letter-spacing: 0.3px
+
+ .link__text_login
+  margin: 1px -2px 0 5px
+  letter-spacing: -0.1px
+
+	.link__image_tel
+		width: 16px
+		height: 20px
+	.link__image_login
+		width: 16px
+		height: 17px
+
+ .area__border_carousel
+	 width: 100%
+	 height: 100%
+
+	.area__wrap_carousel
+		height: 122px
+		margin-top: -29px
+
+ .selector__item
+  margin-left: 7.5px
+  margin-right: 7.5px
+  width: 40.3px
+  height: 4px
+
+ .area__item_carousel-title
+  line-height: 1
+		padding-bottom: 0px
+
+ .area__item_carousel-text
+ 	margin-top: 0px
+  line-height: 1.4
+  
+ .area__items
+	 margin-left: 0px
+	 margin-right: 0px
+
+ .navigation__list
+		margin-left: -10px
+		margin-right: -10px
+
+	.navigation__items
+		width: 150px
+		height: 60px
+		margin-top: 5px
+		margin-bottom: 5px
+		margin-left: 4px
+		margin-right: 4px
+
+	.arcticle__content
+	 padding: 0
+	 margin: 0
+	 min-width: 0
+		max-width: 100%
+  
+ .arcticle__text p
+  font-size: 11px
+
+ .navigation__wrap
+  padding-top: 0px
+  margin-top: 0px
+  padding-top: 0px
+  padding-bottom: 0px
+
+	.navigation__list
+		margin-top: 28px
+
+	.main-arcticle
+		padding-top: 33px
+		padding-bottom: 44px
+ 
+ .arcticle__title
+  margin: 0 20px
+  padding: 0
+  line-height: 1.35
+
+ .arcticle__title h2 br
+  display: none
+
+ .arcticle__text
+  margin-top: 15px
+  margin-bottom: 11px
+  line-height: 1.7
+
+ .text-offset1
+  padding-top: 19px
+
+ .text-offset2
+	 padding-top: 18px
+  margin: 0 30px
+
+ .arcticle__button
+  padding: 6px 0px 0px 0px
+
+ .area__items_gallery
+  margin: 0
+  padding: 0
+  height: 82%
+
