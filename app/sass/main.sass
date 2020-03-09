@@ -643,30 +643,7 @@ ul, li
 textarea:focus, input:focus
  outline: none
 
-.social
-	margin-left: 5px
 
-.social__wrap
-	display: flex
-	justify-content: space-between
- width: 261px
-
-.social__item
-	position: relative
-	width: 26px
-	height: 100%
-
-.social__item img
-	position: absolute
-	top: 0
-	bottom: 0
-	width: 26px
-	transform: rotate(0deg)
-	transition: transform  .3s ease,
-	top .3s ease
- &:hover
-  top: -3px
-  transform: rotate(360deg)
 
 .button
 	border-radius: 5px
@@ -984,10 +961,40 @@ textarea:focus, input:focus
 		order: 9
 	 min-width: 267px
 	 width: 23.4%
+	 height: 68px
 
- .social__wrap
-  margin-top: 15px
-  margin-bottom: 9px
+	.social
+		margin-left: 5px
+		width: 100%
+		height: 100%
+		flex-wrap: wrap
+
+
+	.social__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	 width: 261px
+	 margin-bottom: 9px
+
+	
+	.social__item
+		display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: flex-end
+ 
+
+	.social__item img
+		transition: margin-bottom .2s ease
+	 &:hover
+	  margin-bottom: 5px
+
+
+
+
+
+
 
 	.grid_4, .grid_7
 	 display: none
@@ -1263,15 +1270,77 @@ textarea:focus, input:focus
 	 width: 205px
 	 height: 37px
 
+	// .grid_3
+	//  order: 20
+	//  width: 225px
+	//  height: 37px
+
+	// .social__title
+	// 	display: none
+	// .social__wrap
+	//  width: 225px
+
+
 	.grid_3
-	 order: 20
+		order: 20
+	 min-width: 225px
 	 width: 225px
 	 height: 37px
+	 margin-left: 5px
 
 	.social__title
 		display: none
+
+	.social
+		margin-left: 0px
+		width: 100%
+		height: 100%
+		flex-wrap: wrap
+
+
 	.social__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
 	 width: 225px
+	 height: 100%
+	 // height: 45px
+	 // margin-bottom: 9px
+
+	
+	.social__item
+		display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: flex-end
+ 
+
+	.social__item img
+		transition: margin-bottom .2s ease
+	 &:hover
+	  margin-bottom: 5px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	.grid_2
 	 order: 30
@@ -1586,27 +1655,76 @@ textarea:focus, input:focus
   margin-top: 3px
   margin-left: -5px
 
-	.grid_3
-	 order: 30
-	 width: 176px
-	 height: 64px
-	 margin-top: 0
+	// .grid_3
+	//  order: 30
+	//  width: 176px
+	//  height: 64px
+	//  margin-top: 0
   
-	.social
- 	margin-left: -1px
+	// .social
+ // 	margin-left: -1px
 
- .social__title
-  display: none
- .social__wrap
-	 display: flex
-	 justify-content: space-between
-  width: 176px
+ // .social__title
+ //  display: none
+ // .social__wrap
+	//  display: flex
+	//  justify-content: space-between
+ //  width: 176px
+
+
+
+
+	.grid_3
+		order: 30
+	 min-width: 176px
+	 width: 176px
+	 height: 44px
+	 margin-left: 0px
+	 padding-bottom: 0px
+	 margin-top: 0px
+
+	.social__title
+		display: none
+
+	.social
+		margin-left: 0px
+		width: 100%
+		height: 100%
+		flex-wrap: wrap
+  margin-left: -1px
+
+	.social__wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	 width: 176px
+	 height: 100%
+	 // height: 45px
+	 // margin-bottom: 9px
+
+	
+	.social__item
+		display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: flex-end
+ 
+
+	.social__item img
+		transition: margin-bottom .2s ease
+	 &:hover
+	  margin-bottom: 5px
+
+
+
+
+
 
 	.grid_4
 	 order: 40
 	 width: 97px
 	 height: 27px
-	 align-self: center
+	 align-self: flex-end
 	 margin-top: 0
 
  .area__link
