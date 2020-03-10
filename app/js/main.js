@@ -1,3 +1,32 @@
+ // Function to make IE9+ support forEach:
+        (function() {
+            if (typeof NodeList.prototype.forEach === "function")
+                return false;
+            else
+                NodeList.prototype.forEach = Array.prototype.forEach;
+        })();
+
+function getInternetExplorerVersion()
+                            {
+                                var rv = -1;
+                                if (navigator.appName == 'Microsoft Internet Explorer')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                else if (navigator.appName == 'Netscape')
+                                {
+                                    var ua = navigator.userAgent;
+                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+                                    if (re.exec(ua) != null)
+                                        rv = parseFloat( RegExp.$1 );
+                                }
+                                return rv;
+                            }
+
+
 
 
 document.addEventListener('DOMContentLoaded', function(){ 
@@ -9,23 +38,53 @@ document.addEventListener('DOMContentLoaded', function(){
  let initMediaAreas = addMediaPoint.bind(mediaAreas); // привязываем контекст
  
  // инициализация массива и добавления слушателей
+
+if (getInternetExplorerVersion()!==-1) {
+  //Значит это IE
+ initMediaAreas('1170', 'all and (min-width:761px)');
+ initMediaAreas('760', 'all and (max-width:760px) and (min-width:421px)');
+ initMediaAreas('320', 'all and (max-width:420px)');
+}
+else {
  initMediaAreas('1170', '(min-width: 761px)');
  initMediaAreas('760', '(max-width: 760px) and (min-width: 421px)');
  initMediaAreas('320', '(max-width: 420px)');
- 
+}
+
+
  // Инициализация синхронизации картинок после загрузки страницы
  mediaAreas.forEach(function(element) {
   mediaTask(element.listener);
+  
  });
+
 
  function mediaTask(mediaArea) {
   let currenMedia = 0;
 
+ 
+const prefixIE = '';
   for (var i=0; i < mediaAreas.length ; i++)
-   if ((mediaAreas[i].media === mediaArea.media) && (mediaArea.matches))
+   if ((mediaAreas[i].media == mediaArea.media) && (mediaArea.matches))
     currenMedia = mediaAreas[i].width;
 
+// console.log('--------------------------');
+console.log(prefixIE + mediaAreas[0].media);
+console.log(prefixIE + mediaAreas[1].media);
+console.log(prefixIE + mediaAreas[2].media);
+
+console.log(mediaArea.media);
+console.log(mediaArea.matches);
+
+ // console.log(mediaAreas[1].width);
+ // console.log(mediaAreas[2].width);
+
+
   if (!currenMedia) return; // если не нужно менять картинки, выходим
+
+console.log(currenMedia);
+
+
 
   document.querySelectorAll(CLASS_LISTENER).forEach(function(element) {
    if (!element) {console.error('На странице нет объектов с требуемым классом: ' + CLASS_LISTENER ); return; }
@@ -45,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function(){
  // добавление медиа запроса
  function addMediaPoint(mediaWidth, mediaArea) {
   let newObj = {
-   width: `${mediaWidth}`,
-   media: `${mediaArea}`
+   'width': mediaWidth,
+   'media': mediaArea
   }
   newObj.listener = window.matchMedia(mediaArea);
   newObj.listener.addListener(mediaTask);
@@ -68,7 +127,7 @@ let dropTagFromAtrr = document.querySelectorAll('a');
 // console.log(dropTagFromAtrr.length);
 
 dropTagFromAtrr.forEach(function(element) {
- element.addEventListener("click", dropLink,);
+ element.addEventListener("click", dropLink);
 });
 
 // dropTagFromAtrr.addEventListener("click", dropLink,);
