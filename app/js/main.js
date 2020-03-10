@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function(){
   if (!currenMedia) return; // если не нужно менять картинки, выходим
 
   document.querySelectorAll(CLASS_LISTENER).forEach(function(element) {
-   if (!element) {console.error(`На странице нет объектов с требуемым классом: + ${CLASS_LISTENER}`); return; }
+   if (!element) {console.error('На странице нет объектов с требуемым классом: ' + CLASS_LISTENER ); return; }
    let s1 = element.getAttribute('src');
-   if (!s1) { console.error(`У объекта с классом '${CLASS_LISTENER}' нет необходимого атрибута: src`); return; }
+   if (!s1) { console.error('У объекта с классом ' + CLASS_LISTENER + ' нет необходимого атрибута: src'); return; }
    let s2 = s1.indexOf('-') + 1; // ищем вхождение символа в имени
-   if (s2 === 0) { console.error(`В атрибуте 'src' некорректно задано имя файла. (не найден символ '-')`); return; }
+   if (s2 === 0) { console.error('В атрибуте "src" некорректно задано имя файла. (не найден символ "-")'); return; }
    let s3 = s1.slice(s2);
    let s4 = FOLDER + currenMedia + '/item' + currenMedia + '-' + s3;
    if (s4 != s1) {
