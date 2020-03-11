@@ -6,25 +6,26 @@
                 NodeList.prototype.forEach = Array.prototype.forEach;
         })();
 
+// функция, узнаем, что IE
 function getInternetExplorerVersion()
-                            {
-                                var rv = -1;
-                                if (navigator.appName == 'Microsoft Internet Explorer')
-                                {
-                                    var ua = navigator.userAgent;
-                                    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-                                    if (re.exec(ua) != null)
-                                        rv = parseFloat( RegExp.$1 );
-                                }
-                                else if (navigator.appName == 'Netscape')
-                                {
-                                    var ua = navigator.userAgent;
-                                    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
-                                    if (re.exec(ua) != null)
-                                        rv = parseFloat( RegExp.$1 );
-                                }
-                                return rv;
-                            }
+{
+    var rv = -1;
+    if (navigator.appName == 'Microsoft Internet Explorer')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    else if (navigator.appName == 'Netscape')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    return rv;
+}
 
 
 
@@ -68,23 +69,7 @@ const prefixIE = '';
    if ((mediaAreas[i].media == mediaArea.media) && (mediaArea.matches))
     currenMedia = mediaAreas[i].width;
 
-// console.log('--------------------------');
-console.log(prefixIE + mediaAreas[0].media);
-console.log(prefixIE + mediaAreas[1].media);
-console.log(prefixIE + mediaAreas[2].media);
-
-console.log(mediaArea.media);
-console.log(mediaArea.matches);
-
- // console.log(mediaAreas[1].width);
- // console.log(mediaAreas[2].width);
-
-
   if (!currenMedia) return; // если не нужно менять картинки, выходим
-
-console.log(currenMedia);
-
-
 
   document.querySelectorAll(CLASS_LISTENER).forEach(function(element) {
    if (!element) {console.error('На странице нет объектов с требуемым классом: ' + CLASS_LISTENER ); return; }
@@ -129,9 +114,6 @@ let dropTagFromAtrr = document.querySelectorAll('a');
 dropTagFromAtrr.forEach(function(element) {
  element.addEventListener("click", dropLink);
 });
-
-// dropTagFromAtrr.addEventListener("click", dropLink,);
-
 
 
 
