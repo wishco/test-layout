@@ -1,7 +1,7 @@
-1) сборка сайта при помощи galp (4.0.2)
+1) СЃР±РѕСЂРєР° СЃР°Р№С‚Р° РїСЂРё РїРѕРјРѕС‰Рё gulp (4.0.2)
 
-2) сайт на сервере: http://perm-video.ru/portfolio/romashkino/index.html
+2) СЃР°Р№С‚ РЅР° СЃРµСЂРІРµСЂРµ: http://perm-video.ru/portfolio/romashkino/index.html
 
-3) PSD/JPG макета сайта: https://yadi.sk/d/t1_WO-Z49ELUIg
+3) PSD/JPG РјР°РєРµС‚Р° СЃР°Р№С‚Р°: https://yadi.sk/d/t1_WO-Z49ELUIg
 
-4) Видео сайта, соответствие макету: https://yadi.sk/i/VOl01YcAcENhlQ
+4) Р’РёРґРµРѕ СЃР°Р№С‚Р°, СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ РјР°РєРµС‚Сѓ: https://yadi.sk/i/VOl01YcAcENhlQ
